@@ -8,6 +8,7 @@
   },
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "egg": "^2.14.0",
     "egg-sequelize": "^4.2.0",
     "egg-view-ejs": "^2.0.0",
