@@ -1,0 +1,18 @@
+{
+    "development": {
+        "username": "root",
+        "password": "512121",
+        "database": "estate",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "port": 3306
+    },
+    "test": {
+        "username": "root",
+        "password": "512121",
+        "database": "estate-test",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "port": 3306
+    }
+}

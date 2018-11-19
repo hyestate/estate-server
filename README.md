@@ -1,2 +1,0 @@
-# estate-server
-server
