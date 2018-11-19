@@ -7,8 +7,8 @@ exports.sequelize = {
     database: 'estate',
     host: 'localhost',
     port: '3306',
-    username: 'root',
-    password: '512121'
+    username: 'estate',
+    password: 'estate_passwd'
 }
 
 exports.view = {
