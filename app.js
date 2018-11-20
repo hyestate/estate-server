@@ -3,7 +3,7 @@ module.exports = app => {
     || app.config.env === 'development'
     || app.config.env === 'unittest') {
         app.beforeStart(async () => {
-            await app.model.sync({force: true});
+            await app.model.sync();
         })
     }
 }
