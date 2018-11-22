@@ -4,12 +4,16 @@
     "dev": "egg-bin dev",
     "test": "egg-bin test",
     "cov": "egg-bin cov",
-    "sequelize": "sequelize --"
+    "sequelize": "sequelize --",
+    "build": "npm install --production &&rm -rf ./dist && mmkdir ./dist && tar -zcvf dist/release.tar.gz .",
+    "start": "egg-scripts start --port 8001 --daemon --title estate-server",
+    "stop": "egg-scripts stop --title estate-server"
   },
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
     "egg": "^2.14.0",
+    "egg-scripts": "^2.10.0",
     "egg-sequelize": "^4.2.0",
     "egg-view-ejs": "^2.0.0",
     "mysql2": "^1.6.4"
