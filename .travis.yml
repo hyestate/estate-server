@@ -13,7 +13,6 @@ branches:
 
 cache: npm
 
-[skip travis]: Update README
 addons:
   ssh_known_hosts:
   - 47.98.153.117
