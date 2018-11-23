@@ -5,7 +5,7 @@
     "test": "egg-bin test",
     "cov": "egg-bin cov",
     "sequelize": "sequelize --",
-    "build": "npm install --production &&rm -rf ./dist && mmkdir ./dist && tar -zcvf dist/release.tar.gz .",
+    "build": "rm -rf ./dist && mkdir ./dist && tar -zcvf dist/release.tar.gz .",
     "start": "egg-scripts start --port 8001 --daemon --title estate-server",
     "stop": "egg-scripts stop --title estate-server"
   },
