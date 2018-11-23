@@ -6,7 +6,7 @@ branchs:
   - master
 cache: npm
 install:
-- npm install --production
+- npm install --production >/dev/null 2>&1
 script:
 - npm run build
 addons:
@@ -19,4 +19,4 @@ before_install:
 after_success:
 - chmod 600 ~/.ssh/id_rsa
 - scp dist/release.tar.gz work@172.16.85.219:/home/work/.travis-release
-- ssh work@172.16.85.219 -o StrictHostKeyChecking=no 'cd /home/work/.travis-release &&  tar -xzvf release.tar.gz -C /home/work/.webserver/estate-server'
+- ssh work@172.16.85.219 -o StrictHostKeyChecking=no 'cd /home/work/.travis-release &&  tar -xzf release.tar.gz -C /home/work/webserver/estate-server'
