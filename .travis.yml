@@ -19,7 +19,4 @@ before_install:
 after_success:
 - chmod 600 ~/.ssh/id_rsa
 - scp dist/release.tar.gz work@47.98.153.117:/home/work/.travis-release
-  if: branch = master 
-- ssh work@47.98.153.117 -o StrictHostKeyChecking=no 'cd /home/work/.travis-release &&  tar -xzf release.tar.gz -C /home/work/webserver/estate-server'
-  if: branch = master
-  
+- ssh work@47.98.153.117 -o StrictHostKeyChecking=no 'cd /home/work/.travis-release &&  tar -xzf release.tar.gz -C /home/work/webserver/estate-server'  
