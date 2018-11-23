@@ -1,9 +1,10 @@
 language: node_js
 node_js:
 - 10.8.0
-branchs:
+branches:
   only:
   - master
+  - dev
 cache: npm
 install:
 - npm install --production >/dev/null 2>&1
@@ -18,4 +19,7 @@ before_install:
 after_success:
 - chmod 600 ~/.ssh/id_rsa
 - scp dist/release.tar.gz work@47.98.153.117:/home/work/.travis-release
+  if: branch = master 
 - ssh work@47.98.153.117 -o StrictHostKeyChecking=no 'cd /home/work/.travis-release &&  tar -xzf release.tar.gz -C /home/work/webserver/estate-server'
+  if: branch = master
+  
