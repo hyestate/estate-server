@@ -40,3 +40,4 @@ deploy:
 stages:
   - name: deploy
   if: branch = dev
+  
